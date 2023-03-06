@@ -8,6 +8,7 @@ Initializer! {
         pub product: String,
         pub version: String,
         pub extrainfo: String,
+        pub servicefp: String,
         pub hostname: String,
         pub ostype: String,
         pub tunnel: String,
@@ -22,6 +23,7 @@ impl From<&Vec<OwnedAttribute>> for Service {
         new_item.product = get_attr_value_by_name(attr, "product");
         new_item.version = get_attr_value_by_name(attr, "version");
         new_item.extrainfo = get_attr_value_by_name(attr, "extrainfo");
+        new_item.servicefp = get_attr_value_by_name(attr, "servicefp");
         new_item.hostname = get_attr_value_by_name(attr, "hostname");
         new_item.ostype = get_attr_value_by_name(attr, "ostype");
         new_item.tunnel = get_attr_value_by_name(attr, "tunnel");
